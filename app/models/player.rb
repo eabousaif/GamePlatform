@@ -9,4 +9,8 @@ class Player < ApplicationRecord
   has_many :video_games, through: :play_sessions
   validates :first_name, :last_name, :gamer_tag, presence: true
   validates :gamer_tag, uniqueness: true
+
+  def full_name
+    name = first_name + " " + last_name
+  end
 end

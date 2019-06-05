@@ -14,12 +14,13 @@ class VideoGamesController < ApplicationController
   end
 
   def create
+    @video_game = VideoGame.create(video_game_params)
   end
 
 private
 
   def video_game_params
-    params.require(:player).permit(
+    params.require(:video_game).permit(
       :name,
       :description,
       :rating,
