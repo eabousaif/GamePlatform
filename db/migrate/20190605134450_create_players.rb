@@ -4,8 +4,7 @@ class CreatePlayers < ActiveRecord::Migration[5.2]
       t.string :first_name
       t.string :last_name
       t.string :gamer_tag
-      t.string :email
-      t.string :password
+      t.string :email, null: false, default: ""
 
       t.timestamps
     end
