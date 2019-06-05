@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreatePlaySessions < ActiveRecord::Migration[5.2]
   def change
     create_table :play_sessions do |t|
