@@ -1,5 +1,8 @@
+<h2><%= current_player.gamer_tag %>'s Games</h2>
 <% @video_games.each do |s| %>
  <ol>
-   <li><%= link_to @video_games.name, player_video_game_path %></li>
+   <li><%= link_to current_player.video_games.name, player_video_games_path %></li>
  </ol>
  <% end %>
+
+<%= link_to "Home", players_path %>
