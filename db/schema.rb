@@ -43,8 +43,8 @@ ActiveRecord::Schema.define(version: 2019_06_05_140700) do
 
   create_table "video_games", force: :cascade do |t|
     t.string "name"
-    t.string "description"
-    t.integer "rating"
+    t.text "description"
+    t.float "rating"
     t.integer "release_year"
     t.integer "genre_id"
     t.datetime "created_at", null: false
