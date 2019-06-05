@@ -1,1 +1,7 @@
-<%= current_player.video_game.name %>
+<h2><%= @video_game.name %></h2>
+
+Description: <%= @video_game.description %><br /><br />
+Rating: <%= @video_game.rating %>/10 <br /><br />
+Release Year: <%= @video_game.release_year %><br /><br />
+
+<%= link_to "Go Back", players_path %>
