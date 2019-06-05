@@ -15,6 +15,11 @@ class VideoGamesController < ApplicationController
 
   def create
     @video_game = VideoGame.create(video_game_params)
+    if @video_game.save
+      redirect_to player_video_games_path
+    else
+      redirect_to new_player_video_game_path
+    end
   end
 
 private
