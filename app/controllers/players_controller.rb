@@ -18,7 +18,6 @@ class PlayersController < ApplicationController
   def create
     @player = Player.new(player_params)
     if @player.save
-      session[:player_id] = @player.id
       redirect_to players_path(@player)
     else
       redirect_to new_player_session_path
