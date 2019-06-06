@@ -1,8 +1,8 @@
 <%= stylesheet_link_tag 'application' %>
 <h2><%= current_player.gamer_tag %>'s Games</h2>
-<% @video_games.each do |s| %>
+<% @video_games.each do |game| %>
  <ol>
-   <li><%= link_to @video_games.name, player_video_games_path %></li>
+   <li><%= link_to game.name, player_video_games_path(game) %></li>
  </ol>
  <% end %>
 

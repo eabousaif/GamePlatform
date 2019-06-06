@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 
 class VideoGamesController < ApplicationController
+
   def index
-    @video_games = VideoGame.all
+    @video_games = player.video_games
   end
 
   def new
@@ -14,9 +15,9 @@ class VideoGamesController < ApplicationController
   end
 
   def create
-    @video_game = VideoGame.create(video_game_params)
+    @video_game = VideoGame.new(video_game_params)
     if @video_game.save
-      redirect_to player_video_games_path
+      redirect_to player_video_games_path(player)
     else
       render "new"
     end
@@ -41,6 +42,10 @@ class VideoGamesController < ApplicationController
   end
 
 private
+
+  def player
+    Player.find(params[:player_id])
+  end
 
   def video_game_params
     params.require(:video_game).permit(
