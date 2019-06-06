@@ -11,6 +11,6 @@ class Player < ApplicationRecord
   validates :gamer_tag, uniqueness: true
 
   def full_name
-    name = first_name + " " + last_name
+    first_name + " " + last_name
   end
 end

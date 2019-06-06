@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class VideoGamesController < ApplicationController
-
   def index
     @video_games = player.video_games
   end

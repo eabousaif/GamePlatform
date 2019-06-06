@@ -14,8 +14,17 @@
  *= require_self
  */
 
-h2 {
+* {
   font-family: Helvetica, Arial, sans-serif;
+}
+
+ body {
+  background: linear-gradient(130deg, #EDFFFE 50%, #9EFFFA 50%);
+  background-repeat: no-repeat;
+  background-size: cover;
+ }
+
+h2 {
   letter-spacing: 0.01em;
   color: #005699;
 }
@@ -23,7 +32,6 @@ h2 {
 #welcome {
   font-size: 100%;
   font-weight: 250;
-  font-family: Helvetica, Arial, sans-serif;
   letter-spacing: 0.01em;
   color: #005699;
   margin-top: 0;
@@ -40,7 +48,6 @@ h2 {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     padding-inline-start: 10px;
-    font-family: Helvetica, Arial, sans-serif;
     letter-spacing: 0.01em;
 }
 

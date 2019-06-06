@@ -14,13 +14,13 @@
 Genre.destroy_all
 
 genre = [
-  {name: "Action"},
-  {name: "Action-adventure"},
-  {name: "Adventure"},
-  {name: "Role-playing"},
-  {name: "Simulation"},
-  {name: "Strategy"},
-  {name: "Sports"}
+  { name: "Action" },
+  { name: "Action-adventure" },
+  { name: "Adventure" },
+  { name: "Role-playing" },
+  { name: "Simulation" },
+  { name: "Strategy" },
+  { name: "Sports" },
 ]
 
-genre.each {|genre| Genre.create(genre)}
+genre.each { |g| Genre.create(g) }
