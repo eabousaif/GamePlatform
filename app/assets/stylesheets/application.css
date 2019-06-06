@@ -13,3 +13,46 @@
  *= require_tree .
  *= require_self
  */
+
+h2 {
+  color: #005699;
+}
+
+a {
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  color: black;
+  padding: 0 1px;
+  transition: color ease 0.3s;
+
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: $underlineHeight;
+    left: 0;
+    bottom: 0;
+    background-color: $underlineColor;
+    transition: all ease 0.3s;
+  }
+
+  &:hover {
+    color: white;
+
+    &::after {
+      height: 100%;
+    }
+  }
+}
+
+p {
+  padding: 24px;
+  max-width: 760px;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1.9;
+}
+
