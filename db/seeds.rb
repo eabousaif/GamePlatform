@@ -18,6 +18,7 @@ genre = [
   { name: "Action-adventure" },
   { name: "Adventure" },
   { name: "Role-playing" },
+  { name: "Shooter" },
   { name: "Simulation" },
   { name: "Strategy" },
   { name: "Sports" },
