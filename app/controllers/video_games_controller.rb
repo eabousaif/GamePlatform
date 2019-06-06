@@ -18,7 +18,7 @@ class VideoGamesController < ApplicationController
     if @video_game.save
       redirect_to player_video_games_path
     else
-      redirect_to new_player_video_game_path
+      render "new"
     end
   end
 
@@ -28,10 +28,10 @@ class VideoGamesController < ApplicationController
 
   def update
     @video_game = VideoGame.create(video_game_params)
-    if @video_game.update(video_game_params)
+    if @video_game.update_attributes(video_game_params)
       redirect_to player_video_game_path
     else
-      redirect_to edit_player_video_game_path
+      render "edit"
     end
   end
 
