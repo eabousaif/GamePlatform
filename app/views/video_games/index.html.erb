@@ -1,9 +1,10 @@
 <%= stylesheet_link_tag 'application' %>
 <h2><%= current_player.gamer_tag %>'s Games</h2>
-<% @video_games.each do |game| %>
  <ol>
-   <li><%= link_to game.name, player_video_games_path(game) %></li>
+  <% @video_games.each do |game| %>
+    <li><%= link_to game.name, player_video_games_path(game) %></li>
+  <% end %>
  </ol>
- <% end %>
+
 
 <%= link_to "Home", players_path %>
