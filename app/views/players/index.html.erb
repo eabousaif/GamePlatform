@@ -6,6 +6,7 @@
 <div id="menu">
   <%= link_to "Create A New Video Game", new_player_video_game_path(current_player) %> <br /><br />
   <%= link_to "Add A Video Game To Your Play List", new_play_session_path(current_player) %> <br /><br />
+  <%= link_to "View All Games", video_games_path %> <br /><br />
   <%= link_to "View Your Games", player_video_games_path(current_player) %> <br /><br /><br /><br />
   <%= link_to "Log Out", destroy_player_session_path, method: :delete %>
 </div>

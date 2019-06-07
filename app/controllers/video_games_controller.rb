@@ -2,7 +2,11 @@
 
 class VideoGamesController < ApplicationController
   def index
-    @play_sessions = player.play_sessions
+    if params[:player_id]
+      @play_sessions = player.play_sessions
+    else
+      @video_games = VideoGame.all
+    end
   end
 
   def new
