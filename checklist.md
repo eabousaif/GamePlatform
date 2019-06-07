@@ -17,11 +17,11 @@ Requirements:
 - [X] Includes nested resource "new" form (recipes/1/ingredients/new)
 - [X] Includes form display of validation errors
 - [ ] Includes Unit tests for at least 2 of your models
-- [ ] Conforms to Nitro Ruby linting rules (running `rubocop` returns 0 offenses)
+- [X] Conforms to Nitro Ruby linting rules (running `rubocop` returns 0 offenses)
 - [ ] Includes a `README.md` with an application description and installation guide
 
 Confirm:
 - [ ] The application is pretty DRY
-- [ ] Limited logic in controllers
-- [ ] Views use helper methods if appropriate
-- [ ] Views use partials if appropriate
+- [X] Limited logic in controllers
+- [X] Views use helper methods if appropriate
+- [X] Views use partials if appropriate

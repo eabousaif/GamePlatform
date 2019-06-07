@@ -28,7 +28,14 @@ class PlayersController < ApplicationController
     @player = Player.find(params[:id])
   end
 
-  def update; end
+  def update
+    @player = Player.find(params[:id])
+    if @player.update(player_params)
+      redirect_to player_path
+    else
+      render "edit"
+    end
+  end
 
 private
 

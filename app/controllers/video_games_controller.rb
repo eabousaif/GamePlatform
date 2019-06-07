@@ -2,7 +2,7 @@
 
 class VideoGamesController < ApplicationController
   def index
-    @video_games = player.video_games
+    @play_sessions = player.play_sessions
   end
 
   def new
