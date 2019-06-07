@@ -27,7 +27,7 @@ class VideoGamesController < ApplicationController
   end
 
   def update
-    @video_game = VideoGame.new(video_game_params)
+    @video_game = VideoGame.find(params[:id])
     if @video_game.update(video_game_params)
       redirect_to player_video_game_path
     else
