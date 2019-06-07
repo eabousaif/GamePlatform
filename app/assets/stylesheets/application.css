@@ -19,14 +19,28 @@
 }
 
  html {
-  background: linear-gradient(130deg, #EDFFFE 50%, #9EFFFA 50%);
+  background: linear-gradient(130deg, #F4FEFF 50%, #D6F7FA 50%);
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100%;
  }
+
+h1 {
+  letter-spacing: 0.01em;
+  color: #0230B5;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+}
 
 h2 {
   letter-spacing: 0.01em;
   color: #005699;
+}
+
+h3 {
+
 }
 
 #welcome {

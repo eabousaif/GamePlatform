@@ -10,6 +10,11 @@
   </head>
 
   <body>
+    <h1><%= link_to "Game Face!", players_path %></h1>
+
     <%= yield %>
+    <br />
+
+    <%= link_to "Log Out", destroy_player_session_path, method: :delete %>
   </body>
 </html>

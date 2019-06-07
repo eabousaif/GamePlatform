@@ -2,3 +2,6 @@
 <% @video_games.each do |game| %>
   <li><%= link_to game.name, player_video_game_path(current_player, game) %></li><br />
 <% end %>
+
+<%= link_to "Back", players_path(current_player) %>
+<br />

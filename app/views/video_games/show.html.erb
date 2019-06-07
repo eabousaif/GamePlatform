@@ -1,10 +1,8 @@
 <%= stylesheet_link_tag 'application' %>
-<%= link_to "Home", players_path %><br />
 <h2><%= @video_game.name %></h2>
 
-Description: <%= @video_game.description %><br /><br />
-Rating: <%= @video_game.rating %>/10 <br /><br />
-Release Year: <%= @video_game.release_year %><br /><br />
+<h3>Description: </h3> <%= @video_game.description %><br />
+<h3>Rating: </h3><%= @video_game.rating %>/10 <br />
+<h3>Release Year: </h3><%= @video_game.release_year %><br /><br />
 
 <%= link_to "Edit Video Game", edit_player_video_game_path(current_player) %><br />
-<%= link_to "Back", player_video_games_path(current_player) %><br />
