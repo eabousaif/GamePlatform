@@ -13,6 +13,7 @@ class PlayersController < ApplicationController
 
   def show
     @player = Player.find(params[:id])
+    @play_sessions = @player.play_sessions.limit(3)
   end
 
   def create

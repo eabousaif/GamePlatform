@@ -1,9 +1,10 @@
 <h2><%= link_to current_player.gamer_tag, player_path(current_player) %>'s Games</h2>
+
 <ol>
   <% @play_sessions.each do |session| %>
     <li><%= link_to session.video_game.name, player_video_game_path(current_player, session.video_game) %></li>
     <ul>
       <li>Time Spent Playing - <%= session.duration_in_hours %> hours</li>
-    </ul>
+    </ul><br />
   <% end %>
  </ol>
