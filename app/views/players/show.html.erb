@@ -8,9 +8,6 @@
 <%= link_to "Edit Bio", edit_player_path(current_player) %>
 
 <h3>Favorite Games: </h3>
-  <% @play_sessions.each do |session| %>
-    <li><%= link_to session.video_game.name, player_video_game_path(current_player, session.video_game) %></li>
-  <% end %>
 
 <br />
  <%= link_to "Back", players_path(current_player) %>

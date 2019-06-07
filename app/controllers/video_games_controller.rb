@@ -2,11 +2,7 @@
 
 class VideoGamesController < ApplicationController
   def index
-    if params[:player_id]
-      @play_sessions = player.play_sessions
-    else
-      @video_games = VideoGame.all
-    end
+    @video_games = VideoGame.all
   end
 
   def new
@@ -20,7 +16,7 @@ class VideoGamesController < ApplicationController
   def create
     @video_game = VideoGame.new(video_game_params)
     if @video_game.save
-      redirect_to player_video_games_path(player)
+      redirect_to video_games_path(@video_game)
     else
       render "new"
     end
@@ -33,7 +29,7 @@ class VideoGamesController < ApplicationController
   def update
     @video_game = VideoGame.find(params[:id])
     if @video_game.update(video_game_params)
-      redirect_to player_video_game_path
+      redirect_to video_game_path
     else
       render "edit"
     end
@@ -42,13 +38,11 @@ class VideoGamesController < ApplicationController
   def destroy
     @video_game = VideoGame.find(params[:id])
     @video_game.destroy
+
+    redirect_to video_games_path
   end
 
 private
-
-  def player
-    Player.find(params[:player_id])
-  end
 
   def video_game_params
     params.require(:video_game).permit(
