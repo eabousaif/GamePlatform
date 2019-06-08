@@ -6,6 +6,6 @@
 <h3>Release Year: </h3><%= @video_game.release_year %><br /><br />
 
 <%= link_to "Edit Video Game", edit_video_game_path %><br />
-<%= link_to "Delete Video Game", video_games_path,
+<%= link_to "Delete Video Game", video_game_path,
                               method: :delete,
                               data: { confirm: 'Are you sure?!' } %>
