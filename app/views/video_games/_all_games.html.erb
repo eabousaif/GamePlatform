@@ -1,8 +1,5 @@
-<h2>Video Game List</h2>
 <ol>
 <% @video_games.each do |game| %>
   <li><%= link_to game.name, video_game_path(game) %></li><br />
 <% end %>
 </ol>
-<%= link_to "Back", players_path(current_player) %>
-<br />

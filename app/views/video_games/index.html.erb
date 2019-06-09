@@ -1,6 +1,12 @@
 <%= stylesheet_link_tag 'application' %>
 
+<h2>Video Game List</h2>
+
+<%= render "search_by_genre" %>
+
 <%= render "all_games" %><br />
 
-<%= link_to "Create A New Video Game", new_video_game_path %><br />
+<%= link_to "Create A New Video Game", new_video_game_path %><br /><br />
+
+<%= link_to "Back", players_path(current_player) %><br />
 

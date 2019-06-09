@@ -7,5 +7,7 @@ Rails.application.routes.draw do
 
   resources :video_games
 
+  resources :genres, only: [:index]
+
   root to: 'players#index'
 end
