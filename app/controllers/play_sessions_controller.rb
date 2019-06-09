@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class PlaySessionsController < ApplicationController
+  before_action :player
+
   def index
     @play_sessions = PlaySession.all
   end
@@ -18,7 +20,7 @@ class PlaySessionsController < ApplicationController
     @play_session.player = current_player
 
     if @play_session.save
-      redirect_to player_video_games_path(current_player)
+      redirect_to player_play_session_path(@player, @play_session)
     else
       render "new"
     end
@@ -40,11 +42,11 @@ class PlaySessionsController < ApplicationController
 private
 
   def video_game
-    VideoGame.find(params[:video_game_id])
+    VideoGame.find_by(params[:video_game_id])
   end
 
   def player
-    Player.find(params[:player_id])
+    Player.find_by(params[:player_id])
   end
 
   def play_session_params
