@@ -2,6 +2,11 @@
 
 class GenresController < ApplicationController
   def index
-    @genres = Genre.all
+    if params[:genre][:id].blank?
+      @video_games = VideoGame.all
+    else
+      @video_games = Genre.find(params[:genre][:id]).video_games
+    end
+    render "video_games/index"
   end
 end

@@ -9,7 +9,7 @@ Requirements:
 - [x] Includes at least one has_many through relationship (e.g. Recipe has_many Items through Ingredients)
 - [x] The "through" part of the has_many through includes at least one user submittable attribute (e.g. ingredient#quantity)
 - [X] Includes reasonable validations for simple model objects
-- [ ] Includes a class level ActiveRecord scope method
+- [X] Includes a class level ActiveRecord scope method
 - [X] Includes signup (e.g. Devise)
 - [X] Includes login (e.g. Devise)
 - [X] Includes logout (e.g. Devise)
@@ -18,7 +18,7 @@ Requirements:
 - [X] Includes form display of validation errors
 - [ ] Includes Unit tests for at least 2 of your models
 - [X] Conforms to Nitro Ruby linting rules (running `rubocop` returns 0 offenses)
-- [ ] Includes a `README.md` with an application description and installation guide
+- [X] Includes a `README.md` with an application description and installation guide
 
 Confirm:
 - [ ] The application is pretty DRY

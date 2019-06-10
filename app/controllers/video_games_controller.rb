@@ -5,6 +5,10 @@ class VideoGamesController < ApplicationController
     @video_games = VideoGame.all
   end
 
+  def players_list
+    @video_games = current_player.video_games.uniq
+  end
+
   def new
     @video_game = VideoGame.new
   end

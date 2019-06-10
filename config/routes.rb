@@ -2,10 +2,14 @@ Rails.application.routes.draw do
   devise_for :players
 
   resources :players do
-    resources :play_sessions
+    resources :play_sessions, only: [:index, :new, :create]
   end
 
-  resources :video_games
+  resources :video_games do
+    collection do
+      get :players_list
+    end
+  end
 
   resources :genres, only: [:index]
 
