@@ -7,7 +7,7 @@ class Genre < ApplicationRecord
     if search
       genre = Genre.find_by(name: search)
       if genre
-        self.where(genre_id: genre)
+        where(genre_id: genre)
       else
         Genre.all
       end

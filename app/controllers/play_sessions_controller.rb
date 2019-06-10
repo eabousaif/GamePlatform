@@ -20,7 +20,7 @@ class PlaySessionsController < ApplicationController
     @play_session.player = current_player
 
     if @play_session.save
-      redirect_to player_play_session_path(@player, @play_session)
+      redirect_to player_play_session_path(current_player, @play_session)
     else
       render "new"
     end

@@ -2,7 +2,7 @@
 
 <h2>Add A Game to Your Play List</h2>
 
-<%= form_for [@player, @play_session] do |f| %>
+<%= form_for [current_player, @play_session] do |f| %>
   Select Game: <%= f.collection_select(:video_game_id, VideoGame.all, :id, :name, include_blank: true) %><br />
   Average Play Time In Minutes: <%= f.text_field :duration %><br />
 <%= f.submit "Submit" %>
