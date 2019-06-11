@@ -2,12 +2,15 @@
 
 <ol>
   <% @play_sessions.each do |session| %>
-    <li><%= link_to session.video_game.name, player_play_sessions_path(current_player, session.video_game) %></li>
+    <strong><li ><%= link_to session.video_game.name, player_play_sessions_path(current_player, session.video_game) %></li></strong>
+    <br />
     <ul>
-      <li>Time Spent Playing - <%= session.duration_in_hours %> hours</li>
+      <li>Time Spent Playing <%= session.video_game.name %> - <%= session.duration_in_hours %> hours</li>
+      <li>Date Played: <%= session.created_at.strftime("%d %b - %Y") %></li>
+      <li>Time Played: <%= session.created_at.strftime("%I:%M %p") %></li>
     </ul><br />
   <% end %>
  </ol>
  <br />
- <%= link_to "Back", players_path(current_player) %>
+ <%= link_to "Back", players_list_video_games_path(current_player) %>
 <br />

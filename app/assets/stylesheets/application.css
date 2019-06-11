@@ -95,7 +95,7 @@ a, a:before {
           transition: all 0.2s ease;
 }
 
-ol {
+.list {
     -moz-column-count: 2;
     -moz-column-gap: 20px;
     -webkit-column-count: 2;
@@ -103,3 +103,5 @@ ol {
     column-count: 2;
     column-gap: 20px;
 }
+
+.inline form { display: inline; }

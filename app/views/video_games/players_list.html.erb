@@ -2,7 +2,7 @@
 
 <ol>
   <% @video_games.each do |game| %>
-    <li><%= link_to game.name, video_game_path(game) %></li>
+    <strong><li><%= link_to game.name, video_game_path(game) %></li></strong>
     <ul>
       <li>Time Spent Playing - <%= game.play_sessions.tally(game) %> hours</li>
     </ul><br />
