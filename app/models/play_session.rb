@@ -7,4 +7,8 @@ class PlaySession < ApplicationRecord
     duration = where(video_game: video_game).sum(:duration)
     (duration / 60).to_f.round(2)
   end
+
+  def duration_in_hours
+    (duration / 60).to_f
+  end
 end

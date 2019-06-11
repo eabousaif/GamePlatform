@@ -20,22 +20,9 @@ class PlaySessionsController < ApplicationController
     @play_session.player = current_player
 
     if @play_session.save
-      redirect_to player_play_sessions_path(current_player, @play_session)
+      redirect_to players_list_video_games_path
     else
       render "new"
-    end
-  end
-
-  def edit
-    @play_session = PlaySession.find(params[:id])
-  end
-
-  def update
-    @play_session = PlaySession.find(params[:id])
-    if @play_session.update(play_session_params)
-      redirect_to video_game_path
-    else
-      render "edit"
     end
   end
 

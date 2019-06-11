@@ -94,3 +94,12 @@ a, a:before {
   -webkit-transition: all 0.2s ease;
           transition: all 0.2s ease;
 }
+
+ol {
+    -moz-column-count: 2;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 20px;
+    column-count: 2;
+    column-gap: 20px;
+}
