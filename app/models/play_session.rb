@@ -5,10 +5,10 @@ class PlaySession < ApplicationRecord
   belongs_to :player
   scope :tally, ->(video_game) do
     duration = where(video_game: video_game).sum(:duration)
-    (duration / 60).to_f.round(2)
+    (duration.to_f / 60).round(2)
   end
 
   def duration_in_hours
-    (duration / 60).to_f
+    (duration.to_f / 60).round(2)
   end
 end

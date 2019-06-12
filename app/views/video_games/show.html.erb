@@ -5,7 +5,7 @@
 <h3>Rating: </h3><%= @video_game.rating %>/10.0 <br />
 <h3>Release Year: </h3><%= @video_game.release_year %><br /><br />
 
-<%= button_to "Edit Video Game", edit_video_game_path, class: "button" %>
-<%= button_to "Delete Video Game", video_game_path, class: "logout",
+<%= link_to "Edit Video Game", edit_video_game_path(@video_game), class: "button" %><br />
+<%= link_to "Delete Video Game", video_game_path, class: "logout",
                               method: :delete,
-                              data: { confirm: 'Are you sure?!' } %>
+                              data: { confirm: 'Are you sure?!' } %><br />

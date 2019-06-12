@@ -2,7 +2,11 @@
 
 class VideoGamesController < ApplicationController
   def index
-    @video_games = VideoGame.all
+     @video_games = if params[:genre].blank? || params[:genre][:id].blank?
+                     VideoGame.all
+                   else
+                     Genre.find(params[:genre][:id]).video_games
+                   end
   end
 
   def players_list
