@@ -2,5 +2,5 @@
 <h2>Edit Bio:</h2>
 <%= form_for current_player do |f| %>
   <%= f.text_area :bio, size: "50x7" %><br /><br />
-  <%= f.submit "Update" %>
+  <%= f.submit "Update", class: "submit" %>
 <% end %>

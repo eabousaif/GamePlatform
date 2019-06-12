@@ -12,8 +12,8 @@
   <%= f.text_field :release_year %><br />
 
 
-  Genre: <%= f.collection_select(:genre_id, Genre.all, :id, :name, include_blank: true) %><br />
+  Genre: <%= f.collection_select(:genre_id, Genre.all, :id, :name, include_blank: true) %><br /><br />
 
-  <%= f.submit "Submit" %>
+  <%= f.submit "Submit", class: "submit" %>
 <% end %>
 <br />

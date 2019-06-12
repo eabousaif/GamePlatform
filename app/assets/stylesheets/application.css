@@ -32,6 +32,7 @@ h1 {
   width: 50%;
   padding: 10px;
   text-align: center;
+  font-size: 42px;
 }
 
 h2 {
@@ -55,7 +56,7 @@ h3 {
 
 #menu {
     left: 100px;
-    width: 200px;
+    width: 250px;
     box-sizing: border-box;
     margin-block-start: 1em;
     margin-block-end: 1em;
@@ -104,4 +105,52 @@ a, a:before {
     column-gap: 20px;
 }
 
-.inline form { display: inline; }
+.button{
+  color: #494949 !important;
+  background: #ffffff;
+  padding: 2px;
+  border: 1px solid #494949 !important;
+  border-radius: 7px;
+  display: inline-block;
+}
+
+.button:hover{
+  color: #ffffff !important;
+  background: #0D96CD;
+  border-color: #0D96CD !important;
+  transition: all 0.4s ease 0s;
+}
+
+.submit{
+  color: #494949 !important;
+  font-size: 15px;
+  background: #ffffff;
+  padding: 2px;
+  border: 1px solid #494949 !important;
+  border-radius: 7px;
+  display: inline-block;
+}
+
+.submit:hover{
+  color: #ffffff !important;
+  background: #13D413;
+  border-color: #13D413 !important;
+  transition: all 0.4s ease 0s;
+}
+
+.logout{
+  color: #494949 !important;
+  font-size: 15px;
+  background: #ffffff;
+  padding: 2px;
+  border: 1px solid #494949 !important;
+  border-radius: 7px;
+  display: inline-block;
+}
+
+.logout:hover{
+  color: #ffffff !important;
+  background: #E82E05;
+  border-color: #E82E05 !important;
+  transition: all 0.4s ease 0s;
+}

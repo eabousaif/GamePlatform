@@ -15,7 +15,7 @@
     <%= yield %>
     <br />
     <% if current_player %>
-    <%= link_to "Log Out", destroy_player_session_path, method: :delete %>
+    <%= link_to "Log Out", destroy_player_session_path, method: :delete, class: "logout" %>
     <% else %>
     <% false %>
     <% end %>

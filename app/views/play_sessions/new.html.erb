@@ -4,10 +4,11 @@
 
 <%= form_for [current_player, @play_session] do |f| %>
   Select Game: <%= f.collection_select(:video_game_id, VideoGame.all, :id, :name, include_blank: true) %><br />
-  Average Play Time In Minutes: <%= f.text_field :duration %><br />
-<%= f.submit "Submit" %>
+  Average Play Time In Minutes: <%= f.text_field :duration %><br /><br />
+<%= f.submit "Submit", class: "submit" %>
 <% end %>
 
-<br />
- <%= link_to "Back", players_path(current_player) %>
+
+<br /><br />
+ <%= link_to "Back", players_path(current_player), class: "button" %>
 <br />

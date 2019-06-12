@@ -2,6 +2,6 @@
   <%= form_tag genres_path, :method => :get, :class => 'form-search' do %>
  <div class="input-append">
   <%= collection_select :genre, :id, Genre.all, :id, :name, include_blank: "All"  %>
-  <button type="submit" class="btn">Search</button>
+  <button class="button">Search</button>
  </div>
 <% end %>
