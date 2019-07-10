@@ -1,7 +1,7 @@
 <div class="list">
 <ol>
 <% @video_games.alphabetical.each do |game| %>
-  <li><%= link_to game.name, video_game_path(game) %></li><br />
+  <li><%= link_to game.name, video_game_path(game), :class => "games" %></li><br />
 <% end %>
 </ol>
 </div>
