@@ -2,11 +2,15 @@
 
 <h2>Video Game List</h2>
 
+<%= link_to "Create A New Video Game", new_video_game_path, class: "submit" %><br /><br />
+
 <%= render "video_games/search_by_genre" %><br />
+
 
 <%= render "video_games/all_games" %><br />
 
-<%= link_to "Create A New Video Game", new_video_game_path, class: "submit" %><br /><br />
+<div class="display_games">
+</div>
 
 <%= link_to "Back", players_path(current_player), class: "button" %><br />
 

@@ -41,7 +41,7 @@ h2 {
 }
 
 h3 {
-
+  display: inline-block;
 }
 
 #welcome {
@@ -119,6 +119,7 @@ a, a:before {
   background: #0D96CD;
   border-color: #0D96CD !important;
   transition: all 0.4s ease 0s;
+  text-decoration: none;
 }
 
 .submit{
@@ -128,7 +129,7 @@ a, a:before {
   padding: 2px;
   border: 1px solid #494949 !important;
   border-radius: 7px;
-  display: inline-block;
+  display: inline;
 }
 
 .submit:hover{
@@ -136,6 +137,7 @@ a, a:before {
   background: #13D413;
   border-color: #13D413 !important;
   transition: all 0.4s ease 0s;
+  text-decoration: none;
 }
 
 .logout{
@@ -153,4 +155,5 @@ a, a:before {
   background: #E82E05;
   border-color: #E82E05 !important;
   transition: all 0.4s ease 0s;
+  text-decoration: none;
 }

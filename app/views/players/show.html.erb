@@ -2,10 +2,10 @@
 
 <h2><%= current_player.gamer_tag %></h2>
 
-<h3>Name: </h3><%= current_player.full_name %><br />
+<h3>Name: </h3> <%= current_player.full_name %><br />
 
-<h3>Bio:</h3> <%= current_player.bio %><br /><br />
-<%= link_to "Edit Bio", edit_player_path(current_player), class: "button" %>
+<h3>Bio:</h3> <%= current_player.bio %><br />
+<%= link_to "Edit Bio", edit_player_path(current_player), class: "button" %> <br /><br />
 
 <h3>Games Sessions Played: </h3> <%= current_player.play_sessions.count %>
 
