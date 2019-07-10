@@ -18,7 +18,7 @@
   font-family: Helvetica, Arial, sans-serif;
 }
 
- html {
+ body {
   background: linear-gradient(130deg, #F4FEFF 50%, #D6F7FA 50%);
   background-repeat: no-repeat;
   background-size: cover;

@@ -19,6 +19,7 @@ class VideoGamesController < ApplicationController
 
   def show
     @video_game = VideoGame.find(params[:id])
+    render :show, layout: false if request.xhr?.present?
   end
 
   def create
