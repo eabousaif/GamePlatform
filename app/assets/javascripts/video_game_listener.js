@@ -8,10 +8,11 @@ $(function() {
 
     e.preventDefault()
     $.getJSON(this.href).done(function(response){
-      const $ol = $("div.display_games")
+      const $list = $("div.display_games")
       const video_game = response.video_game
       const videoGameObject = new VideoGame(video_game.name, video_game.description, video_game.rating, video_game.release_year)
-      $ol.append(videoGameObject.videoGameEl())
+      $list.html("")
+      $list.append(videoGameObject.videoGameEl())
     })
   })
 })
