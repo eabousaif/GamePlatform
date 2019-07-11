@@ -3,7 +3,9 @@ $(function() {
   $info.on("click", function(e){
     e.preventDefault()
     $.getJSON(this.href).done(function(response){
-      console.log(response)
+      const playSessions = new PlaySessionFormatter(response)
+      playSessions.playSessionsTemplate()
+      const $ol = $("div.display_play_sessions")
     })
   })
 })
