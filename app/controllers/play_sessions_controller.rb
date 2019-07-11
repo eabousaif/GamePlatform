@@ -5,6 +5,12 @@ class PlaySessionsController < ApplicationController
 
   def index
     @play_sessions = current_player.play_sessions
+    respond_to do |format|
+      format.html {render :show}
+      format.json do
+        render json: @play_sessions, include: :video_game
+      end
+    end
   end
 
   def show
