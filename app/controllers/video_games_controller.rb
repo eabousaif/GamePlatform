@@ -2,11 +2,12 @@
 
 class VideoGamesController < ApplicationController
   def index
-     @video_games = if params[:genre].blank? || params[:genre][:id].blank?
-                     VideoGame.all
-                   else
-                     Genre.find(params[:genre][:id]).video_games
-                   end
+    @video_games =
+      if params[:genre].blank? || params[:genre][:id].blank?
+        VideoGame.all
+      else
+        Genre.find(params[:genre][:id]).video_games
+      end
   end
 
   def players_list
@@ -19,7 +20,12 @@ class VideoGamesController < ApplicationController
 
   def show
     @video_game = VideoGame.find(params[:id])
-    render :show, layout: false if request.xhr?.present?
+    respond_to do |format|
+      format.html {render :show}
+      format.json do
+        render json: {video_game: @video_game}
+      end
+    end
   end
 
   def create
