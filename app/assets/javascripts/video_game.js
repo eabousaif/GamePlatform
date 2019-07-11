@@ -12,12 +12,10 @@ class VideoGame {
 
   videoGameEl() {
     return `
-      <h2> ${this.name} </h2>
-      <ol>
-        <li>Description: ${this.description}</li>
-        <li>Rating: ${this.rating}</li>
-        <li>Release Year: ${this.release_year}</li>
-      </ol>
+      <h2 align="center"> ${this.name} </h2>
+        <strong>Description:</strong> ${this.description}<br />
+        <strong>Rating:</strong> ${this.rating}/10<br />
+        <strong>Release Year:</strong> ${this.release_year}<br />
     `
   }
 }
