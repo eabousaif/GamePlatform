@@ -1,5 +1,6 @@
 <h2><%= link_to current_player.gamer_tag, player_path(current_player) %>'s Games</h2>
 
+<div class="play_session_item">
 <ol>
   <% @play_sessions.each do |session| %>
     <strong><li ><%= link_to session.video_game.name, player_play_sessions_path(current_player, session.video_game) %></li></strong>
@@ -11,6 +12,7 @@
     </ul><br />
   <% end %>
  </ol>
+</div>
  <br />
  <%= link_to "Back", players_list_video_games_path(current_player), class: "button" %>
 <br />
