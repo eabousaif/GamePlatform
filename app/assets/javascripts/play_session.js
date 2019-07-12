@@ -12,10 +12,10 @@ class PlaySession {
     return `
     <ul>
       <li><strong>${this.name}</strong></li>
-      <p>Time Spent Playing - ${this.name} - ${this.duration} hours</p>
-      <p>Date Played - ${this.created_at}.toLocaleDateString()</p>
-      <p>Time Played - ${this.created_at}.toLocaleTimeString()</p>
-    </ul>
+      <p>Time Spent Playing - ${this.duration} hours</p>
+      <p>Date Played - ${this.created_at}</p>
+      <p>Time Played - ${this.created_at}</p>
+    </ul><br />
     `
   }
 }

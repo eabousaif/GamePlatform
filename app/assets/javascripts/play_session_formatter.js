@@ -10,8 +10,8 @@ class PlaySessionFormatter {
     this.play_sessions.forEach(function(session){
       const videogameName = session.video_game.name
       const duration = session.duration
-      const datePlayed = session.created_at      // const timePlayed = session.created_at.toLocaleTimeString()
-      new PlaySession(videogameName, duration, datePlayed)
+      const timePlayed = session.created_at
+      new PlaySession(videogameName, duration, timePlayed)
     })
   }
 
