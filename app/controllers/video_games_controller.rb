@@ -21,9 +21,9 @@ class VideoGamesController < ApplicationController
   def show
     @video_game = VideoGame.find(params[:id])
     respond_to do |format|
-      format.html {render :show}
+      format.html { render :show }
       format.json do
-        render json: {video_game: @video_game}
+        render json: { video_game: @video_game }
       end
     end
   end

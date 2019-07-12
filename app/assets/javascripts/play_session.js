@@ -9,11 +9,11 @@ class PlaySession {
   }
 
   datePlayed() {
-    moment(created_at).format('LL');
+    return moment(this.created_at).format('LL')
   }
 
   timePlayed() {
-    moment(created_at).format('LT');
+    return moment(this.created_at).format('LT')
   }
 
   playSessionEl() {
