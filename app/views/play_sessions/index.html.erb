@@ -7,8 +7,8 @@
     <br />
     <ul>
       <li>Time Spent Playing <%= session.video_game.name %> - <%= session.duration_in_hours %> hours</li>
-      <li>Date Played: <%= session.created_at.strftime("%d %b - %Y") %></li>
-      <li>Time Played: <%= session.created_at.strftime("%I:%M %p") %></li>
+      <li>Date Played: <%= session.created_at.strftime("%B %d, %Y") %></li>
+      <li>Time Played: <%= session.created_at.strftime("%l:%M %p") %></li>
     </ul><br />
   <% end %>
  </ol>

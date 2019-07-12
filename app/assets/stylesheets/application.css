@@ -158,11 +158,28 @@ a, a:before {
   text-decoration: none;
 }
 
-.display_play_sessions{
+.display_play_sessions {
     -moz-column-count: 2;
     -moz-column-gap: 20px;
     -webkit-column-count: 2;
     -webkit-column-gap: 20px;
     column-count: 2;
     column-gap: 20px;
+}
+
+.edit_button{
+  color: #494949 !important;
+  background: #ffffff;
+  padding: 2px;
+  border: 1px solid #494949 !important;
+  border-radius: 7px;
+  display: inline-block;
+}
+
+.edit_button:hover{
+  color: #ffffff !important;
+  background: #0D96CD;
+  border-color: #0D96CD !important;
+  transition: all 0.4s ease 0s;
+  text-decoration: none;
 }
