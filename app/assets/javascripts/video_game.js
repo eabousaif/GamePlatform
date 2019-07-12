@@ -16,8 +16,8 @@ class VideoGame {
       <h2 align="center"> ${this.name} </h2>
         <strong>Description:</strong> ${this.description}<br /><br />
         <strong>Rating:</strong> ${this.rating}/10<br /><br />
-        <strong>Release Year:</strong> ${this.release_year}<br />
-        <a href="/video_games/${this.id}">More info</a><br /><br />
+        <strong>Release Year:</strong> ${this.release_year}<br /><br />
+        <a href="/video_games/${this.id}"><strong>More info</strong></a><br /><br />
     `
   }
 }

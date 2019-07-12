@@ -8,13 +8,21 @@ class PlaySession {
     this.constructor.all.push(this)
   }
 
+  datePlayed() {
+    moment(created_at).format('LL');
+  }
+
+  timePlayed() {
+    moment(created_at).format('LT');
+  }
+
   playSessionEl() {
     return `
     <ul>
       <li><strong>${this.name}</strong></li>
       <p>Time Spent Playing - ${this.duration} hours</p>
-      <p>Date Played - ${this.created_at}</p>
-      <p>Time Played - ${this.created_at}</p>
+      <p>Date Played - ${this.datePlayed()}</p>
+      <p>Time Played - ${this.timePlayed()}</p>
     </ul><br />
     `
   }
