@@ -4,10 +4,12 @@
 
 <h3>Name: </h3> <%= current_player.full_name %><br />
 
-<h3>Bio:</h3> <%= current_player.bio %><br />
+<div class="bio">
+  <h3>Bio:</h3> <%= current_player.bio %><br />
+</div>
 
 <div class="edit">
-  <h2>Edit Bio:</h2>
+  <h3>Edit Bio:</h3>
   <%= form_for current_player do |f| %>
     <%= f.text_area :bio, size: "50x7" %><br />
     <%= f.submit "Update", class: "submit" %><br /><br />

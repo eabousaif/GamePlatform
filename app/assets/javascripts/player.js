@@ -3,6 +3,8 @@ $(function(){
   $bio.on("click", function(e){
     e.preventDefault()
     $(".edit").show()
+    $(".bio").hide()
+    $(".edit_button").hide()
   })
   $(".edit").hide()
 })
