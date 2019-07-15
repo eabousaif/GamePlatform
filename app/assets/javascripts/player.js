@@ -16,7 +16,6 @@ $(function(){
       dataType: "json",
       contentType: "application/json"
     }).done(function(response){
-      console.log(response)
       $bio.html("")
       $bio.append(response.bio)
       hideForm()

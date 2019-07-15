@@ -18,8 +18,10 @@ class PlaySessionFormatter {
     if (PlaySession.all.length === 0) {
       this.createSession()
     }
+
     const $ul = $("div.display_play_sessions")
     $ul.html("")
+
     PlaySession.all.forEach(function(session){
       $ul.append(`${session.playSessionEl()}`)
     })
