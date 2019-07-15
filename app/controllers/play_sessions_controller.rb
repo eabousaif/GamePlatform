@@ -9,6 +9,7 @@ class PlaySessionsController < ApplicationController
       format.html
       format.json do
         render json: @play_sessions, include: :video_game
+        # belongs to relationship, Garett said it's cool
       end
     end
   end
