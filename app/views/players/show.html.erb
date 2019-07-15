@@ -12,7 +12,7 @@
   <h3>Edit Bio:</h3>
   <%= form_for current_player do |f| %>
     <%= f.text_area :bio, size: "50x7" %><br />
-    <%= f.submit "Update", class: "submit" %><br /><br />
+    <%= f.submit "Update", class: "update_bio" %><br /><br />
   <% end %>
 </div>
 
@@ -27,4 +27,3 @@
 <br />
 
 <%= javascript_include_tag "player_listener.js" %>
-<%= javascript_include_tag "player.js" %>

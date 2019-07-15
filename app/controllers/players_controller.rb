@@ -27,16 +27,15 @@ class PlayersController < ApplicationController
 
   def edit
     @player = Player.find(params[:id])
-    respond_to do |format|
-      format.html { render :show }
-      format.json { render json: @player.to_json, status: :updated }
-    end
   end
 
   def update
     @player = Player.find(params[:id])
     if @player.update(player_params)
-      redirect_to player_path
+      respond_to do |format|
+        format.html { render :show }
+        format.json { render json: @player.to_json }
+      end
     else
       render "edit"
     end
