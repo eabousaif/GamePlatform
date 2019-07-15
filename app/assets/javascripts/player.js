@@ -1,7 +1,7 @@
 $(function(){
   const $update = $(".edit_player")
   const $edit = $(".edit_button")
-  const $bio = $(".bio")
+  const $bio = $("#display_bio")
 
   $edit.on("click", function(event){
     event.preventDefault()
@@ -16,7 +16,9 @@ $(function(){
       dataType: "json",
       contentType: "application/json"
     }).done(function(response){
-      $bio.append()
+      console.log(response)
+      $bio.html("")
+      $bio.append(response.bio)
       hideForm()
     })
   })
