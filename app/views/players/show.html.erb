@@ -8,7 +8,7 @@
   <h3>Bio:</h3> <%= current_player.bio %><br />
 </div>
 
-<div class="edit">
+<div class="edit" style="display: none;">
   <h3>Edit Bio:</h3>
   <%= form_for current_player do |f| %>
     <%= f.text_area :bio, size: "50x7" %><br />
