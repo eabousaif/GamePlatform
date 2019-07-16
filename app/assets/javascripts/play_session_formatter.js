@@ -5,15 +5,6 @@ class PlaySessionFormatter {
     this.play_sessions = play_sessions
   }
 
-  createSession() {
-    this.play_sessions.forEach(function(session){
-      const videogameName = session.video_game.name
-      const duration = session.duration
-      const timePlayed = session.created_at
-      new PlaySession(videogameName, duration, timePlayed)
-    })
-  }
-
   playSessionsTemplate() {
     if (PlaySession.all.length === 0) {
       this.createSession()
@@ -24,6 +15,15 @@ class PlaySessionFormatter {
 
     PlaySession.all.forEach(function(session){
       $ul.append(`${session.playSessionEl()}`)
+    })
+  }
+
+  createSession() {
+    this.play_sessions.forEach(function(session){
+      const videogameName = session.video_game.name
+      const duration = session.duration
+      const timePlayed = session.created_at
+      new PlaySession(videogameName, duration, timePlayed)
     })
   }
 }

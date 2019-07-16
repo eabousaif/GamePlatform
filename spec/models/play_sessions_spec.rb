@@ -5,8 +5,11 @@ RSpec.describe PlaySession, type: :model do
     expect(create(:play_session)).to be_valid
   end
 
-  it "Play Session is not valid without a duration" do
-    play_session = build(:play_session)
-    expect(play_session).to be_valid
+  describe "validations" do
+    it { is_expected.to validate_presence_of(:duration) }
+  end
+
+  describe "associations" do
+    it { is_expected.to belong_to(:player) }
   end
 end

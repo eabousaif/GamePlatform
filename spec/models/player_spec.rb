@@ -6,23 +6,15 @@ RSpec.describe Player, type: :model do
     expect(create(:player)).to be_valid
   end
 
-  it "Player is not valid without a first name" do
-    expect(build(:player, first_name:nil)).not_to be_valid
+  describe "validations" do
+    it { is_expected.to validate_presence_of(:first_name) }
+    it { is_expected.to validate_presence_of(:last_name) }
+    it { is_expected.to validate_presence_of(:gamer_tag) }
+    it { is_expected.to validate_presence_of(:email) }
+    it { is_expected.to validate_presence_of(:password) }
   end
 
-  it "Player is not valid without a last name" do
-    expect(build(:player, last_name:nil)).not_to be_valid
-  end
-
-  it "Player is not valid without a gamer tag" do
-    expect(build(:player, gamer_tag:nil)).not_to be_valid
-  end
-
-  it "Player is not valid without an email" do
-    expect(build(:player, email:nil)).not_to be_valid
-  end
-
-  it "Player is not valid without a password" do
-    expect(build(:player, password:nil)).not_to be_valid
+  describe "associations" do
+    it { is_expected.to have_many(:play_sessions) }
   end
 end

@@ -9,10 +9,4 @@ RSpec.describe Genre, type: :model do
     genre = build(:genre)
     expect(genre).to be_valid
   end
-
-  it "A play session belongs to a player" do
-    player = create(:player)
-    play_session = create(:play_session, player: player)
-    expect(play_session.player).to eq(player)
-  end
 end
