@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :players
+  devise_for :players, path: 'devise'
 
   resources :players do
     resources :play_sessions, only: [:index, :new, :create]

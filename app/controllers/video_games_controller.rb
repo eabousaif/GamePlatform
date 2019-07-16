@@ -31,7 +31,7 @@ class VideoGamesController < ApplicationController
   def create
     @video_game = VideoGame.new(video_game_params)
     if @video_game.save
-      redirect_to video_games_path(@video_game)
+      redirect_to video_game_path(@video_game)
     else
       render "new"
     end

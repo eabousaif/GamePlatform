@@ -9,4 +9,8 @@ RSpec.describe Player, type: :model do
   it "is not valid without a password" do
     expect(build(:player, password: nil)).not_to be_valid
   end
+
+  it "Player DB Structure" do
+    should have_db_column(:first_name).of_type(:string)
+  end
 end
