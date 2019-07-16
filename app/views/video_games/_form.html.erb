@@ -11,8 +11,8 @@
   <%= f.label :release_year %>:
   <%= f.text_field :release_year %><br />
 
-
-  Genre: <%= f.collection_select(:genre_id, Genre.all, :id, :name, include_blank: true) %><br /><br />
+  <%= f.label :genre_id, "Genre" %>:
+  <%= f.collection_select(:genre_id, Genre.all, :id, :name, include_blank: true) %><br /><br />
 
   <%= f.submit "Create Video Game", class: "submit" %>
 <% end %>
