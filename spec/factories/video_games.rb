@@ -1,5 +1,6 @@
 FactoryBot.define do
   factory :video_game do
+    id { "1" }
     name { "Uncharted 2" }
     description { "dope ass game" }
     rating { "10" }

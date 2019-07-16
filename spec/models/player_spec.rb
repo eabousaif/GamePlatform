@@ -2,11 +2,11 @@ require 'rails_helper'
 
 RSpec.describe Player, type: :model do
 
-  it "has a valid factory - first name, last name, gamer tag, email, and a password" do
+  it "Has a valid factory - A player has a first name, last name, gamer tag, email, and a password" do
     expect(create(:player)).to be_valid
   end
 
-  it "is not valid without a password" do
-    expect(build(:player, password: nil)).not_to be_valid
+  it "Player is not valid without an email and a password" do
+    expect(build(:player, email:nil, password: nil)).not_to be_valid
   end
 end
