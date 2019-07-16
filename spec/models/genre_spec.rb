@@ -5,8 +5,14 @@ RSpec.describe Genre, type: :model do
     expect(create(:genre)).to be_valid
   end
 
-  it "is not valid without an id or a name" do
+  it "is not valid without a name" do
     genre = build(:genre)
     expect(genre).to be_valid
+  end
+
+  it "A play session belongs to a player" do
+    player = create(:player)
+    play_session = create(:play_session, player: player)
+    expect(play_session.player).to eq(player)
   end
 end

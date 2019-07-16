@@ -1,14 +1,10 @@
 require "rails_helper"
 RSpec.describe "Sessions" do
-  it "Successfully signs a player in and out" do
+  it "Upon login, the player's index page is rendered" do
     player = create(:player)
 
     sign_in player
     get root_path
-    expect(response).to render_template(:index)
-
-    sign_out player
-    get root_path
-    expect(response).not_to render_template(:show)
+    expect(response).to render_template(:'players/index')
   end
 end

@@ -5,7 +5,7 @@ RSpec.describe "Video Game System Spec", type: :system do
     driven_by(:rack_test)
   end
 
-it "creates a new video game with the correct genre" do
+it "Creates a new video game with the correct genre" do
   genre = create(:genre)
     visit "/video_games/new"
 
