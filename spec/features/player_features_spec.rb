@@ -1,5 +1,5 @@
 require_relative "../rails_helper.rb"
-describe 'Player Signup', :type => :feature do
+describe 'Player Signup', type: :feature do
 
   it 'successfully signs up Player' do
     visit '/players'
