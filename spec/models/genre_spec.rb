@@ -5,7 +5,7 @@ RSpec.describe Genre, type: :model do
     expect(create(:genre)).to be_valid
   end
 
-  it "is not valid without a name" do
+  it "Genre is not valid without a name" do
     genre = build(:genre)
     expect(genre).to be_valid
   end
