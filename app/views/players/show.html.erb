@@ -20,7 +20,7 @@
 
 <h3>Games Sessions Played: </h3> <%= link_to current_player.play_sessions.count.to_s + " Sessions", player_play_sessions_path(current_player), class: "view_play_sessions" %>
 
-<div class="display_play_sessions">
+<div class="display_play_sessions" style="display:none;">
 </div><br /><br />
 
  <%= link_to "Back", players_path(current_player), class: "button" %>
